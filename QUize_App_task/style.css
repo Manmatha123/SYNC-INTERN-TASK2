@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgb(20, 20, 20);
+}
+
+.quizefield {
+    overflow: hidden;
+    border: 1px solid;
+    min-height: 300px;
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    box-shadow: inset 1px 1px 2px black, inset -1px -1px 3px white;
+}
+
+#innerfield {
+    overflow: hidden;
+    border: 1px solid;
+    min-height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    box-shadow: 2px 2px 3px black, -2px -2px 3px white;
+}
+
+#ques {
+    padding: 10px;
+    width: 650px;
+    height: 50%;
+    /* background-color: rgb(63, 63, 63); */
+    text-align: center;
+    font-size: 22px;
+    box-shadow: inset 1px 2px 3px black, inset -1px -2px 3px white;
+}
+
+.inputfield {
+    padding: 10px 0 0 10px;
+    height: auto;
+    width: 100%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.inputfield input {
+    height: 20px;
+    width: 20px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.inputfield label {
+    margin-right: auto;
+    position: relative;
+    top: -24px;
+    left: 33px;
+    font-size: 18px;
+}
+
+#btn {
+    height: 39px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    font-size: 17px;
+    background-color: deepskyblue;
+    border: 0px solid;
+    outline: none;
+    box-shadow: 2px 2px 3px black;
+    cursor: pointer;
+}
+
+.success {
+    min-height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navbarsuccess {
+    background-color: green;
+    height: 39px;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0 0 0;
+    font-size: 23px;
+}
+
+.navbad {
+    background-color: red;
+}
+
+#susimg {
+    width: auto;
+    animation: happy 1s alternate-reverse infinite;
+    height: 260px;
+    position: relative;
+}
+
+#sadimg {
+    width: auto;
+    position: relative;
+    height: 120px;
+    margin: auto;
+    animation: sad 1s alternate-reverse infinite;
+}
+
+@keyframes sad {
+    0% {
+        top: 30px;
+    }
+
+    100% {
+
+        top: 0px;
+    }
+}
+
+@keyframes happy {
+    0% {
+        transform: rotate(9deg);
+        top: 0px;
+    }
+
+    50% {
+        top: -20px;
+    }
+
+    100% {
+        top: 0px;
+        transform: rotate(-9deg);
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .container {
+        min-height: 100vh;
+        width: 100vw;
+        padding: 0 0 20px 0;
+    }
+
+    .quizefield {
+        min-height: 550px;
+        width: 98%;
+    }
+
+    #innerfield {
+        min-height: 550px;
+        width: 100%;
+    }
+
+
+    .success {
+        min-height: 550px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .success section {
+        position: absolute;
+        top: 0px;
+        height: 50px;
+        width: 100%;
+        padding: 9px 0 0 0;
+        font-size: 22px;
+    }
+
+    #susimg {
+        width: auto;
+        height: 250px;
+    }
+
+    #ques {
+        padding: 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    .inputfield {
+        padding: 10px 0 0 10px;
+        height: auto;
+        width: 100%;
+        display: flex;
+
+        justify-content: center;
+        position: relative;
+        top: 40px;
+        flex-direction: column;
+
+    }
+
+}
